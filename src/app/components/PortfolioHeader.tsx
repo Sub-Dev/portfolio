@@ -84,6 +84,16 @@ const PortfolioHeader = () => {
                   historico-academico.js
                 </Typography>
               </Link>
+              <Link href="#experiencia">
+                <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
+                  experiencia.js
+                </Typography>
+              </Link>
+              <Link href="#tecnologias">
+                <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
+                  tecnologias.js
+                </Typography>
+              </Link>
               <Link href="#contato">
                 <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
                   contato.js

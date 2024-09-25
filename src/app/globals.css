@@ -1,12 +1,14 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1e1e1e; /* Fundo escuro similar ao VSCode */
+  --foreground: #d4d4d4; /* Cor do texto */
+  --border-color: #333; /* Cor das bordas e divisões */
+  --highlight: #d4d4d4; /* Cor de destaque, azul do VSCode */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1e1e1e; /* Fundo escuro para o tema escuro */
+    --foreground: #d4d4d4; /* Cor do texto para o tema escuro */
   }
 }
 
@@ -19,7 +21,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Fira Code", "Courier New", Courier, monospace; /* Fonte monoespaçada como a do VSCode */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,8 +33,19 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--highlight); /* Mudar a cor do link para a cor de destaque */
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse sobre os links */
+}
+
+.container {
+  padding: 1rem; /* Adicione um pouco de preenchimento nas containers */
+  border: 1px solid var(--border-color); /* Borda em volta das seções */
+  border-radius: 5px; /* Bordas arredondadas */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo levemente transparente */
 }
 
 @media (prefers-color-scheme: dark) {

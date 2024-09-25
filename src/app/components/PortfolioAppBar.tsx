@@ -22,6 +22,7 @@ const PortfolioAppBar = () => {
     { text: 'Apresentação', to: 'apresentacao' },
     { text: 'Projetos', to: 'projetos' },
     { text: 'Histórico acadêmico', to: 'historico-academico' },
+    { text: 'Experiencia de trabalho', to: 'experiencia' },
     { text: 'Tecnologias', to: 'tecnologias' },
     { text: 'Contato', to: 'contato' },
   ];

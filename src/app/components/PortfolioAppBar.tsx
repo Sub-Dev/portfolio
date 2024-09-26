@@ -8,7 +8,7 @@ const PortfolioAppBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleScrollToTop = () => {
-    scroll.scrollToTop();
+    scroll.scrollTo(0, { smooth: true, offset: -40 });
   };
 
   const toggleDrawer = (open) => (event) => {
@@ -28,7 +28,7 @@ const PortfolioAppBar = () => {
   ];
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#464646', boxShadow: 'none', height: '40px' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#464646', boxShadow: 'none', height: '40px' }}>
       <Toolbar sx={{ padding: '0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         {/* Logo ou nome */}
         <Typography variant="h6" sx={{
@@ -58,9 +58,11 @@ const PortfolioAppBar = () => {
 
         <Box display={{ xs: 'none', md: 'flex' }} flexDirection="row" justifyContent="flex-end" alignItems="center">
           {menuItems.map((item) => (
-            <ScrollLink key={item.text} to={item.to} smooth={true} duration={500}>
+            item.to === 'apresentacao' ? (
               <Button
+                key={item.text}
                 color="inherit"
+                onClick={handleScrollToTop}
                 sx={{
                   textTransform: 'capitalize',
                   fontSize: '14px',
@@ -79,7 +81,30 @@ const PortfolioAppBar = () => {
               >
                 {item.text}
               </Button>
-            </ScrollLink>
+            ) : (
+              <ScrollLink key={item.text} to={item.to} smooth={true} duration={500} offset={-40}>
+                <Button
+                  color="inherit"
+                  sx={{
+                    textTransform: 'capitalize',
+                    fontSize: '14px',
+                    minHeight: '40px',
+                    marginBottom: '20px',
+                    padding: '0 20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    marginTop: '2px',
+                    '&:hover': {
+                      backgroundColor: '#616161',
+                      transform: 'scale(1.05)',
+                      transition: 'background-color 0.3s, transform 0.3s',
+                    },
+                  }}
+                >
+                  {item.text}
+                </Button>
+              </ScrollLink>
+            )
           ))}
         </Box>
       </Toolbar>
@@ -87,7 +112,7 @@ const PortfolioAppBar = () => {
       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
         <Box sx={{ width: 250, backgroundColor: '#464646', height: '100%' }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
           {menuItems.map((item) => (
-            <ScrollLink key={item.text} to={item.to} smooth={true} duration={500}>
+            <ScrollLink key={item.text} to={item.to} smooth={true} duration={500} offset={-40}>
               <Button
                 fullWidth
                 sx={{

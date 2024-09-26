@@ -9,6 +9,7 @@ import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import TriangleIcon from '@mui/icons-material/Warning';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import { Link as ScrollLink } from 'react-scroll';
 
 const PortfolioHeader = () => {
   const [openSrc, setOpenSrc] = useState(true);
@@ -31,6 +32,7 @@ const PortfolioHeader = () => {
         fontFamily: '"Courier New", Courier, monospace',
         position: 'relative',
         overflow: 'hidden',
+        marginTop: '40px'
       }}
     >
       {/* Barra Lateral */}
@@ -46,7 +48,9 @@ const PortfolioHeader = () => {
         }}
       >
         {/* Título da barra lateral */}
-        <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold', color: 'white' }}>Portfolio</Typography>
+        <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold', color: 'white' }}>
+          Portfolio
+        </Typography>
 
         {/* Pasta src */}
         <Typography
@@ -69,36 +73,37 @@ const PortfolioHeader = () => {
               <span role="img" aria-label="folder">{openComponents ? '📂' : '📁'}</span> components <span style={{ marginLeft: '5px', color: 'white' }}>{openComponents ? '▼' : '▶️'}</span>
             </Typography>
             <Collapse in={openComponents}>
-              <Link href="#apresentacao">
-                <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
+              {/* Ajuste os links aqui */}
+              <ScrollLink to="apresentacao" smooth={true} duration={500} offset={-40}>
+                <Typography variant="body2" sx={{ mb: 1, color: 'white', cursor: 'pointer', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
                   apresentação.js
                 </Typography>
-              </Link>
-              <Link href="#projetos">
-                <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
+              </ScrollLink>
+              <ScrollLink to="projetos" smooth={true} duration={500} offset={-40}>
+                <Typography variant="body2" sx={{ mb: 1, color: 'white', cursor: 'pointer', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
                   projetos.js
                 </Typography>
-              </Link>
-              <Link href="#historico-academico">
-                <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
+              </ScrollLink>
+              <ScrollLink to="historico-academico" smooth={true} duration={500} offset={-40}>
+                <Typography variant="body2" sx={{ mb: 1, color: 'white', cursor: 'pointer', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
                   historico-academico.js
                 </Typography>
-              </Link>
-              <Link href="#experiencia">
-                <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
+              </ScrollLink>
+              <ScrollLink to="experiencia" smooth={true} duration={500} offset={-40}>
+                <Typography variant="body2" sx={{ mb: 1, color: 'white', cursor: 'pointer', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
                   experiencia.js
                 </Typography>
-              </Link>
-              <Link href="#tecnologias">
-                <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
+              </ScrollLink>
+              <ScrollLink to="tecnologias" smooth={true} duration={500} offset={-40}>
+                <Typography variant="body2" sx={{ mb: 1, color: 'white', cursor: 'pointer', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
                   tecnologias.js
                 </Typography>
-              </Link>
-              <Link href="#contato">
-                <Typography variant="body2" sx={{ mb: 1, color: 'white', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
+              </ScrollLink>
+              <ScrollLink to="contato" smooth={true} duration={500} offset={-40}>
+                <Typography variant="body2" sx={{ mb: 1, color: 'white', cursor: 'pointer', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
                   contato.js
                 </Typography>
-              </Link>
+              </ScrollLink>
             </Collapse>
           </Box>
         </Collapse>

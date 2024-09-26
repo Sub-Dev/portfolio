@@ -54,10 +54,10 @@ const Technologies = () => {
         sx={{
           marginBottom: '2rem',
           fontWeight: 'bold',
-          color: '#B0B0B0' // Cor cinza mais escura
+          color: '#B0B0B0'
         }}
       >
-        Linguagens, ferramentas e frameworks que estudo.
+        Linguagens, ferramentas e frameworks que usei e estudo.
       </Typography>
       <Grid container spacing={4} justifyContent="center">
         {techList.map((tech, index) => (

@@ -1,4 +1,3 @@
-// components/Projects.tsx
 import React from 'react';
 import { Box, Typography, Grid, Card, CardMedia, CardContent, CardActions, Tooltip, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -21,7 +20,7 @@ const projects = [
   },
   {
     title: 'Clone Netflix UI',
-    description: 'Este projeto é uma réplica detalhada da interface de usuário do Netflix, desenvolvida para mostrar habilidades em front-end com HTML, CSS e JavaScript, utilizando a biblioteca React.js.',
+    description: 'Este projeto é uma réplica detalhada da interface de usuário do Netflix, desenvolvida para mostrar habilidades em front-end com HTML, CSS e JavaScript, utilizando a biblioteca React.js e detalhes dinâmicos obtidos através da API TMDb',
     github: 'https://github.com/Sub-Dev/clone-netflix-ui',
     demo: 'https://sub-dev.github.io/clone-netflix-ui/',
     image: '/img/netflixuiclone.png',
@@ -45,33 +44,43 @@ const Projects = () => {
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{
-              backgroundColor: '#333', color: '#fff', height: '100%', transition: 'transform 0.3s ease-in-out', '&:hover': {
-                transform: 'scale(1.03)',
+              backgroundColor: '#333',
+              color: '#fff',
+              height: '100%',
+              boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.2)',
+              transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+              '&:hover': {
+                transform: 'scale(1.05)',
+                boxShadow: '0px 6px 30px rgba(0, 0, 0, 0.4)',
               },
             }}>
               <CardMedia
                 component="img"
-                height="140"
                 image={project.image}
                 alt={project.title}
+                sx={{
+                  height: { xs: '200px', sm: '250px', md: '300px' },
+                  objectFit: 'contain',
+                  borderRadius: '8px',
+                }}
               />
               <CardContent>
-                <Typography variant="h5" component="div">
+                <Typography variant="h5" component="div" sx={{ fontWeight: 'bold', marginBottom: '8px' }}>
                   {project.title}
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#e0e0e0' }}> {/* Cor mais visível */}
+                <Typography variant="body2" sx={{ color: '#b0b0b0', lineHeight: 1.6 }}>
                   {project.description}
                 </Typography>
               </CardContent>
               <CardActions>
                 <Tooltip title="Repositório GitHub" arrow>
-                  <IconButton size="small" href={project.github} target="_blank" rel="noopener" sx={{ color: '#ffcc00' }}>
+                  <IconButton size="small" href={project.github} target="_blank" rel="noopener" sx={{ color: '#ffcc00', transition: 'color 0.3s ease', '&:hover': { color: '#fff' } }}>
                     <GitHubIcon />
                   </IconButton>
                 </Tooltip>
                 {project.demo && (
                   <Tooltip title="Demo" arrow>
-                    <IconButton size="small" href={project.demo} target="_blank" rel="noopener" sx={{ color: '#ffcc00' }}>
+                    <IconButton size="small" href={project.demo} target="_blank" rel="noopener" sx={{ color: '#ffcc00', transition: 'color 0.3s ease', '&:hover': { color: '#fff' } }}>
                       <LaunchIcon />
                     </IconButton>
                   </Tooltip>
@@ -84,5 +93,6 @@ const Projects = () => {
     </Box>
   );
 };
+
 
 export default Projects;

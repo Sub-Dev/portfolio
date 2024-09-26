@@ -24,7 +24,7 @@ export default function Home() {
         <Experience />
       </section>
 
-      <section id="tecnologias" style={{ padding: '5rem 0', marginBottom: '0.5rem' }}>
+      <section id="tecnologias" style={{ padding: '5rem 0', marginBottom: '2.5rem' }}>
         <Technologies />
       </section>
 

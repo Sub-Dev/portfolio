@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h3 align = "center" fontSize="60px">
+  Meu Portfólio Web
+</h3>
 
-## Getting Started
+<p align="center">
+  <h3 align = "center" fontSize="60px">
+    Portfólio DEMO
+  </h3>
+  <img alt="Interface da aplicação Homepage" src=".github/portfolio-demo.gif" width="100%">
+  <img alt="Interface da aplicação geral" src=".github/portfolio.png" width="100%">
+</p>
 
-First, run the development server:
+# Meu Portfólio Web
+
+Este é o repositório do meu portfólio pessoal, desenvolvido em [Next.js](https://nextjs.org/), onde apresento os projetos que desenvolvi ao longo da minha trajetória como desenvolvedor web. O objetivo é demonstrar minhas habilidades técnicas e meu trabalho em uma interface moderna e responsiva.
+
+## 🚀 Tecnologias Utilizadas
+
+- **Next.js**: Framework React para renderização do lado do servidor (SSR) e geração de sites estáticos.
+- **TypeScript**: Tipagem estática para maior segurança no desenvolvimento.
+- **Material UI (MUI)**: Biblioteca de componentes React para criação de interfaces de usuário elegantes e funcionais.
+
+## 🎨 Funcionalidades
+
+- **Responsividade**: Totalmente responsivo, adaptado para desktop, tablets e smartphones.
+- **Página de Projetos**: Uma seção dedicada aos projetos que desenvolvi, com links para repositórios GitHub e demos ao vivo.
+- **Temática Visual Studio Code**: Visual moderno inspirado no editor VS Code, com paleta de cores escuras e agradável para leitura.
+
+## 📸 Capturas de Tela
+
+### Desktop
+
+<p align="center">
+  <img alt="Portfolio Desktop" src=".github/portfolio.png" width="100%">
+</p>
+
+### Mobile
+
+<p align="center">
+  <img src=".github/portfolio-mobile-1.png" alt="Portfolio Mobile 1" width="45%" />
+  <img src=".github/portfolio-mobile-2.png" alt="Portfolio Mobile 2" width="45%" />
+</p>
+
+## 🛠️ Como Rodar o Projeto Localmente
+
+1. Clone o repositório:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   git clone https://github.com/SeuUsuario/seu-portfolio.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Acesse o diretório do projeto:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd seu-portfolio
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Instale as dependências:
 
-## Learn More
+```bash
+ npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Rode o servidor de desenvolvimento:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+ npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. Abra seu navegador e acesse:
 
-## Deploy on Vercel
+```bash
+ http://localhost:3000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚙️ Build para Produção
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para criar a build de produção:
+
+```bash
+  npm run build
+```
+
+Este comando irá gerar a versão otimizada do projeto para produção.
+
+## 📂 Estrutura de Pastas
+
+```bash
+├── public               # Arquivos públicos, como imagens
+├── src
+│   ├── app              # Componentes da aplicação
+│   └── components       # Componentes reutilizáveis
+├── package.json         # Dependências e scripts npm
+└── README.md            # Documentação do projeto
+```
+
+## 👥 Autor
+
+<table>
+ <tr>
+ <td alinhar="centro">
+ <a href="https://github.com/Sub-Dev" target="_blank">
+ <img src="https://avatars.githubusercontent.com/u/68450692?v=4" alt="Anthony-Marin" height="30" width="30"/>
+ </a>
+ </td>
+ <td>
+ <strong>Anthony Marin</strong> (Sub-Dev) - <a href="https://github.com/Sub-Dev">Perfil no GitHub</a>
+ </td>
+ </tr>
+</table>
+
+## 📝 Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais informações.

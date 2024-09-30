@@ -84,6 +84,13 @@ const AcademicHistory = () => {
 
               <ListItem>
                 <ListItemIcon>
+                  <CodeIcon sx={{ color: '#ffcc00' }} />
+                </ListItemIcon>
+                <ListItemText primary="Curso Completo de PHP 7" secondary="Hcode | Udemy | Maio de 2021" secondaryTypographyProps={{ style: { color: '#b0bec5' } }} />
+              </ListItem>
+
+              <ListItem>
+                <ListItemIcon>
                   <VerifiedIcon sx={{ color: '#ffcc00' }} />
                 </ListItemIcon>
                 <ListItemText primary="Ustart - Capacitação para Desenvolvedores Júnior" secondary="Umentor | Outubro de 2022" secondaryTypographyProps={{ style: { color: '#b0bec5' } }} />

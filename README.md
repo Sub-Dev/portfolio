@@ -37,8 +37,8 @@ Este é o repositório do meu portfólio pessoal, desenvolvido em [Next.js](http
 ### Mobile
 
 <p align="center">
-  <img src=".github/portfolio-mobile-1.png" alt="Portfolio Mobile 1" width="45%" />
-  <img src=".github/portfolio-mobile-2.png" alt="Portfolio Mobile 2" width="45%" />
+  <img src=".github/portfolio-mobile-1.png" alt="Portfolio Mobile 1" height="300px" style="margin-right: 10px;" />
+  <img src=".github/portfolio-mobile-2.png" alt="Portfolio Mobile 2" height="300px" />
 </p>
 
 ## 🛠️ Como Rodar o Projeto Localmente
@@ -46,13 +46,13 @@ Este é o repositório do meu portfólio pessoal, desenvolvido em [Next.js](http
 1. Clone o repositório:
 
 ```bash
-   git clone https://github.com/SeuUsuario/seu-portfolio.git
+   git clone https://github.com/Sub-Dev/portfolio.git
 ```
 
 2. Acesse o diretório do projeto:
 
 ```bash
-cd seu-portfolio
+cd portfolio
 ```
 
 3. Instale as dependências:

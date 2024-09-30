@@ -170,10 +170,10 @@ const PortfolioHeader = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           position: 'absolute',
-          bottom: '0', // Coloca na parte inferior da tela
+          bottom: '0',
           left: 0,
           right: 0,
-          height: { xs: '40px', sm: '30px' }, // Ajusta a altura da barra para ser mais fina
+          height: { xs: '40px', sm: '30px' },
         }}
       >
         {/* Parte do feature */}
@@ -193,7 +193,7 @@ const PortfolioHeader = () => {
           </Box>
         </Link>
 
-        <Box sx={{ display: 'flex', alignItems: 'center', display: { xs: 'none', sm: 'flex' } }}>
+        <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
           <ErrorOutlineIcon sx={{ color: 'white', marginRight: '2px', fontSize: '1.2rem' }} />
           <Typography variant="body2" sx={{ color: 'white', marginRight: '4px' }}>
             0

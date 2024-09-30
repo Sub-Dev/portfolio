@@ -1,7 +1,7 @@
 // components/Technologies.tsx
 "use client";
 import React from 'react';
-import { Box, Typography, List, ListItem, ListItemText, ListItemIcon, Grid } from '@mui/material';
+import { Box, Typography, ListItem, ListItemText, ListItemIcon, Grid } from '@mui/material';
 import HtmlIcon from '@mui/icons-material/Html';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { SiJavascript, SiPhp, SiLaravel, SiReact, SiNestjs, SiPostman, SiMysql, SiAxios, SiJsonwebtokens, SiSwagger } from 'react-icons/si';

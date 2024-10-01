@@ -1,14 +1,14 @@
 :root {
-  --background: #1e1e1e; /* Fundo escuro similar ao VSCode */
-  --foreground: #d4d4d4; /* Cor do texto */
-  --border-color: #333; /* Cor das bordas e divisões */
-  --highlight: #d4d4d4; /* Cor de destaque, azul do VSCode */
+  --background: #1e1e1e;
+  --foreground: #d4d4d4;
+  --border-color: #333;
+  --highlight: #d4d4d4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1e1e1e; /* Fundo escuro para o tema escuro */
-    --foreground: #d4d4d4; /* Cor do texto para o tema escuro */
+    --background: #1e1e1e;
+    --foreground: #d4d4d4;
   }
 }
 
@@ -21,7 +21,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Fira Code", "Courier New", Courier, monospace; /* Fonte monoespaçada como a do VSCode */
+  font-family: "Fira Code", "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,19 +33,19 @@ body {
 }
 
 a {
-  color: var(--highlight); /* Mudar a cor do link para a cor de destaque */
+  color: var(--highlight);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse sobre os links */
+  text-decoration: underline;
 }
 
 .container {
-  padding: 1rem; /* Adicione um pouco de preenchimento nas containers */
-  border: 1px solid var(--border-color); /* Borda em volta das seções */
-  border-radius: 5px; /* Bordas arredondadas */
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo levemente transparente */
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media (prefers-color-scheme: dark) {

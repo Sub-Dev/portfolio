@@ -27,7 +27,6 @@ const AcademicHistory = () => {
       </Typography>
 
       <Grid container spacing={3} justifyContent="center">
-        {/* Histórico Acadêmico */}
         <Grid item xs={12} md={12}>
           <Box sx={{ textAlign: 'left', color: '#fff' }}>
             <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#ffcc00' }}>
@@ -67,7 +66,6 @@ const AcademicHistory = () => {
             </Typography>
             <Divider sx={{ marginY: '1rem', backgroundColor: '#ffcc00' }} />
             <List dense>
-              {/* Cursos organizados por data */}
               <ListItem>
                 <ListItemIcon>
                   <CodeIcon sx={{ color: '#ffcc00' }} />

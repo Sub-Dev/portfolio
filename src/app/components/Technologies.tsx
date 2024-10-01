@@ -4,7 +4,7 @@ import React from 'react';
 import { Box, Typography, ListItem, ListItemText, ListItemIcon, Grid } from '@mui/material';
 import HtmlIcon from '@mui/icons-material/Html';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { SiJavascript, SiPhp, SiLaravel, SiReact, SiNestjs, SiPostman, SiMysql, SiAxios, SiJsonwebtokens, SiSwagger } from 'react-icons/si';
+import { SiJavascript, SiPhp, SiLaravel, SiReact, SiNestjs, SiPostman, SiMysql, SiAxios, SiJsonwebtokens, SiSwagger, SiComposer } from 'react-icons/si';
 import { FaCss3Alt, FaNode, FaDocker } from "react-icons/fa";
 import { DiVisualstudio } from "react-icons/di";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -31,6 +31,7 @@ const Technologies = () => {
     { name: 'Material-UI', icon: <Image src={MaterialUIIcon} alt="Material UI" width={48} height={48} /> },
     { name: 'Git', icon: <GitHubIcon style={{ fontSize: '2rem', color: 'white' }} /> },
     { name: 'JWT Token', icon: <SiJsonwebtokens style={{ fontSize: '2rem', color: '#000000' }} /> },
+    { name: 'Composer', icon: <SiComposer style={{ fontSize: '2rem', color: 'white' }} /> },
   ];
 
   return (

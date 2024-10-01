@@ -32,6 +32,13 @@ const projects = [
     demo: 'https://sub-dev.github.io/blizzard-br-challenges/',
     image: '/img/blizzardBRChallenge.png',
   },
+  {
+    title: 'Portfólio Page',
+    description: 'Este projeto é o da pagina de portfolio onde você esta.Foi desenvolvido com Next.js e Material UI',
+    github: 'https://github.com/Sub-Dev/portfolio',
+    demo: 'https://sub-dev-portfolio.vercel.app',
+    image: '/img/portfolio.png',
+  },
 ];
 
 const Projects = () => {

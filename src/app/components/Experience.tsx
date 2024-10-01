@@ -31,7 +31,6 @@ const Experience = () => {
       </Typography>
 
       <Grid container spacing={3} justifyContent="center">
-        {/* Trabalho Freelancer */}
         <Grid item xs={12} md={6}>
           <Box sx={{ textAlign: 'left', color: '#fff' }}>
             <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#ffcc00' }}>

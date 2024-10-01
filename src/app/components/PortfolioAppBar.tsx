@@ -30,7 +30,6 @@ const PortfolioAppBar = () => {
   return (
     <AppBar position="fixed" sx={{ backgroundColor: '#464646', boxShadow: 'none', height: '40px' }}>
       <Toolbar sx={{ padding: '0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        {/* Logo ou nome */}
         <Typography variant="h6" sx={{
           cursor: 'pointer',
           fontWeight: 'bold',

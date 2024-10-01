@@ -19,12 +19,11 @@ export default function Home() {
         <AcademicHistory />
       </section>
 
-      {/* Seção de experiência */}
       <section id="experiencia" style={{ padding: '5rem 0', marginBottom: '4rem' }}>
         <Experience />
       </section>
 
-      <section id="tecnologias" style={{ padding: '5rem 0', marginBottom: '2.5rem' }}>
+      <section id="tecnologias" style={{ padding: '5rem 0', marginBottom: '4rem' }}>
         <Technologies />
       </section>
 

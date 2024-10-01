@@ -47,12 +47,10 @@ const PortfolioHeader = () => {
           boxShadow: '2px 0 5px rgba(0, 0, 0, 0.5)',
         }}
       >
-        {/* Título da barra lateral */}
         <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold', color: 'white' }}>
           Portfolio
         </Typography>
 
-        {/* Pasta src */}
         <Typography
           variant="body2"
           sx={{ mb: 1, cursor: 'pointer', color: 'cyan', '&:hover': { textDecoration: 'underline' } }}
@@ -73,7 +71,6 @@ const PortfolioHeader = () => {
               <span role="img" aria-label="folder">{openComponents ? '📂' : '📁'}</span> components <span style={{ marginLeft: '5px', color: 'white' }}>{openComponents ? '▼' : '▶️'}</span>
             </Typography>
             <Collapse in={openComponents}>
-              {/* Ajuste os links aqui */}
               <ScrollLink to="apresentacao" smooth={true} duration={500} offset={-40}>
                 <Typography variant="body2" sx={{ mb: 1, color: 'white', cursor: 'pointer', pl: 4, '&:hover': { textDecoration: 'underline' } }}>
                   apresentação.js
@@ -108,7 +105,6 @@ const PortfolioHeader = () => {
           </Box>
         </Collapse>
 
-        {/* Outras pastas sem arquivos */}
         <Typography variant="body2" sx={{ mb: 1, color: 'yellow' }}>
           <span role="img" aria-label="folder">📁</span> styles <span style={{ marginLeft: '5px', color: 'white' }}>▶️</span>
         </Typography>
@@ -120,7 +116,6 @@ const PortfolioHeader = () => {
         </Typography>
       </Box>
 
-      {/* Conteúdo Principal */}
       <Box
         sx={{
           flexGrow: 1,
@@ -134,19 +129,17 @@ const PortfolioHeader = () => {
           left: { xs: '0', sm: '-10%' },
         }}
       >
-        {/* Foto de perfil */}
+
         <Avatar
           alt="Anthony Marin (Sub-Dev)"
           src="/img/eu.png"
           sx={{ width: { xs: 100, sm: 150 }, height: { xs: 100, sm: 150 }, mb: 3 }}
         />
 
-        {/* Nome */}
         <Typography variant="h4" sx={{ mb: 2, textAlign: 'center' }}>
           Olá, Eu sou Anthony Marin (Sub-dev)
         </Typography>
 
-        {/* Animação de digitação */}
         <Typography variant="h5" sx={{ whiteSpace: 'pre', fontWeight: 'bold', letterSpacing: '0.05em', textAlign: 'center' }}>
           <Typewriter
             words={['console.log("Desenvolvedor Full Stack");', 'Desenvolvedor Full Stack', 'console.log("Desenvolvedor Web");', 'Desenvolvedor Web', 'if (gostoTecnologia) {', '  aprender();', '}']}
@@ -160,7 +153,6 @@ const PortfolioHeader = () => {
         </Typography>
       </Box>
 
-      {/* Barra de Status */}
       <Box
         sx={{
           backgroundColor: '#007acc',
@@ -176,7 +168,6 @@ const PortfolioHeader = () => {
           height: { xs: '40px', sm: '30px' },
         }}
       >
-        {/* Parte do feature */}
         <Typography variant="body2" sx={{ display: { xs: 'flex', sm: 'flex' }, alignItems: 'center' }}>
           <AccountTreeIcon sx={{ color: 'white', marginRight: '8px', fontSize: '1.2rem' }} />
           <Typography variant="body2" component="span" sx={{ color: 'white' }}>
@@ -226,7 +217,6 @@ const PortfolioHeader = () => {
         </Typography>
       </Box>
 
-      {/* Fundo com efeito visual (opcional) */}
       <Box
         sx={{
           position: 'absolute',

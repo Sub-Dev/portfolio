@@ -9,7 +9,8 @@ import { FaCss3Alt, FaNode, FaDocker } from "react-icons/fa";
 import { DiVisualstudio } from "react-icons/di";
 import { BiLogoPostgresql } from "react-icons/bi";
 import Image from 'next/image';
-import MaterialUIIcon from '../../../public/img/icons8-material-ui-48.png'; // Certifique-se de que o ícone Material-UI está importado
+import MaterialUIIcon from '../../../public/img/icons8-material-ui-48.png';
+import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 
 const Technologies = () => {
   const techList = [
@@ -32,6 +33,8 @@ const Technologies = () => {
     { name: 'Git', icon: <GitHubIcon style={{ fontSize: '2rem', color: 'white' }} /> },
     { name: 'JWT Token', icon: <SiJsonwebtokens style={{ fontSize: '2rem', color: '#000000' }} /> },
     { name: 'Composer', icon: <SiComposer style={{ fontSize: '2rem', color: 'white' }} /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss style={{ fontSize: '2rem', color: '#06B6D4' }} /> },
+    { name: 'Next.js', icon: <SiNextdotjs style={{ fontSize: '2rem', color: '#000000' }} /> },
   ];
 
   return (

@@ -39,6 +39,21 @@ const projects = [
     demo: 'https://sub-dev-portfolio.vercel.app',
     image: '/img/portfolio.png',
   },
+  {
+    title: 'Multi-step Form Solution',
+    description: 'Esta é uma solução para o Multi-step form challenge do Frontend Mentor com a utlização de Next.js e Tailwind CSS',
+    github: 'https://github.com/Sub-Dev/multi-step-form-nextjs',
+    demo: 'https://multi-step-form-nextjs-iota.vercel.app',
+    image: '/img/multi-step-form.png',
+  },
+  {
+    title: 'Card Game Flutter',
+    description: 'Este é um jogo de cartas desenvolvido com Flutter e Flame Engine, onde o jogador e o computador se enfrentam utilizando cartas com diferentes valores de ataque, defesa e vida. O jogo inclui animações, efeitos sonoros e uma mecânica de combate simples.Foi desenvolvido com o intuito de aprender mais sobre a Flame Engine e o Flutter',
+    github: 'https://github.com/Sub-Dev/card_game',
+    demo: '',
+    image: '/img/cardgame.png',
+  },
+
 ];
 
 const Projects = () => {

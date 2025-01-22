@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Contact = () => {
   const handleDownloadResume = () => {
-    window.open('/curriculo2024.pdf', '_blank');
+    window.open('/AnthonyMarin.pdf', '_blank');
   };
 
   return (

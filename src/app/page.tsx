@@ -5,6 +5,7 @@ import AcademicHistory from './components/AcademicHistory';
 import Technologies from './components/Technologies';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
+
 export default function Home() {
   return (
     <>

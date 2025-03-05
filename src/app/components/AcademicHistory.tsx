@@ -121,6 +121,13 @@ const AcademicHistory = () => {
                 </ListItemIcon>
                 <ListItemText primary="Back End Development and APIs" secondary="freeCodeCamp | Julho de 2024" secondaryTypographyProps={{ style: { color: '#b0bec5' } }} />
               </ListItem>
+
+              <ListItem>
+                <ListItemIcon>
+                  <CodeIcon sx={{ color: '#ffcc00' }} />
+                </ListItemIcon>
+                <ListItemText primary="Quality Assurance" secondary="freeCodeCamp | Fevereiro de 2025" secondaryTypographyProps={{ style: { color: '#b0bec5' } }} />
+              </ListItem>
             </List>
           </Box>
         </Grid>

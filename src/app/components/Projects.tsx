@@ -94,7 +94,14 @@ const projects = [
   },
 
 ];
-function NextArrow(props) {
+
+interface CustomArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+function NextArrow(props: CustomArrowProps) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -112,7 +119,7 @@ function NextArrow(props) {
   );
 }
 
-function PrevArrow(props) {
+function PrevArrow(props: CustomArrowProps) {
   const { className, style, onClick } = props;
   return (
     <div

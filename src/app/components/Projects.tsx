@@ -1,7 +1,18 @@
+"use client";
 import React from 'react';
-import { Box, Typography, Grid, Card, CardMedia, CardContent, CardActions, Tooltip, IconButton } from '@mui/material';
+import { Box, Typography, Card, CardMedia, CardContent, CardActions, Tooltip, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import dynamic from 'next/dynamic';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+const Slider = dynamic(() => import('react-slick'), {
+  ssr: false,
+  loading: () => <p>Loading carousel...</p>,
+});
 
 const projects = [
   {
@@ -53,68 +64,183 @@ const projects = [
     demo: '',
     image: '/img/cardgame.png',
   },
+  {
+    title: 'Blog Comments API',
+    description: 'Sistema de comentários para blogs usando NestJS,Docker,JWT e Swagger',
+    github: 'https://github.com/Sub-Dev/blog-comments-api-nestjs',
+    demo: '',
+    image: '/img/blogcomments.png',
+  },
+  {
+    title: 'American-British Translator',
+    description: 'Projeto para traduzir textos entre inglês americano e britânico utilizando Express,Mocha,Chai e Nodejs',
+    github: 'https://github.com/Sub-Dev/freecodecamp_american-british-english-translator',
+    demo: '',
+    image: '/img/blogpost-freecodecamplogo.jpg',
+  },
+  {
+    title: 'Sudoku Solver',
+    description: 'Resolve e valida puzzles de Sudoku usando JavaScript.',
+    github: 'https://github.com/Sub-Dev/freecodecamp_sudoku-solver',
+    demo: '',
+    image: '/img/blogpost-freecodecamplogo.jpg',
+  },
+  {
+    title: 'Biblioteca de Livros',
+    description: 'Um aplicativo Full Stack JavaScript para gerenciamento de uma biblioteca de livro',
+    github: 'https://github.com/Sub-Dev/freecodecamp_library',
+    demo: '',
+    image: '/img/blogpost-freecodecamplogo.jpg',
+  },
 
 ];
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: 'block',
+        right: '-5%',
+        zIndex: 2
+      }}
+      onClick={onClick}
+    >
+      <ArrowForwardIosIcon sx={{ fontSize: '1.5rem', color: '#fff' }} />
+    </div>
+  );
+}
+
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: 'block',
+        left: '-5%',
+        zIndex: 2
+      }}
+      onClick={onClick}
+    >
+      <ArrowBackIosNewIcon sx={{ fontSize: '1.5rem', color: '#fff' }} />
+    </div>
+  );
+}
+
 
 const Projects = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2, arrows: true },
+      },
+      {
+        breakpoint: 600,
+        settings: { slidesToShow: 1, arrows: false, autoplaySpeed: 2000 },
+      },
+    ],
+  };
+
   return (
-    <Box sx={{ padding: '2rem', borderRadius: '8px', margin: '0 auto', maxWidth: '1200px' }}>
-      <Typography variant="h4" sx={{ marginBottom: '2rem', fontWeight: 'bold', color: '#fff', textAlign: 'center' }}>
-        Projetos
-      </Typography>
-      <Grid container spacing={4}>
-        {projects.map((project, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card sx={{
-              backgroundColor: '#333',
-              color: '#fff',
-              height: '100%',
-              boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.2)',
-              transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
-              '&:hover': {
-                transform: 'scale(1.05)',
-                boxShadow: '0px 6px 30px rgba(0, 0, 0, 0.4)',
-              },
-            }}>
-              <CardMedia
-                component="img"
-                image={project.image}
-                alt={project.title}
-                sx={{
-                  height: { xs: '200px', sm: '250px', md: '300px' },
-                  objectFit: 'contain',
-                  borderRadius: '8px',
-                }}
-              />
-              <CardContent>
-                <Typography variant="h5" component="div" sx={{ fontWeight: 'bold', marginBottom: '8px' }}>
-                  {project.title}
-                </Typography>
-                <Typography variant="body2" sx={{ color: '#b0b0b0', lineHeight: 1.6 }}>
-                  {project.description}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Tooltip title="Repositório GitHub" arrow>
-                  <IconButton size="small" href={project.github} target="_blank" rel="noopener" sx={{ color: '#ffcc00', transition: 'color 0.3s ease', '&:hover': { color: '#fff' } }}>
-                    <GitHubIcon />
-                  </IconButton>
-                </Tooltip>
-                {project.demo && (
-                  <Tooltip title="Demo" arrow>
-                    <IconButton size="small" href={project.demo} target="_blank" rel="noopener" sx={{ color: '#ffcc00', transition: 'color 0.3s ease', '&:hover': { color: '#fff' } }}>
-                      <LaunchIcon />
+    <>
+      <style jsx global>{`
+        .slick-prev:before,
+        .slick-next:before {
+          display: none;
+        }
+
+        .slick-dots li button:before {
+          color: white !important;
+          font-size: 12px !important;
+        }
+
+        .slick-dots li.slick-active button:before {
+          color: white !important;
+        }
+
+        .slick-dots {
+          bottom: -20%; 
+        }
+
+        @media (max-width: 600px) {
+          .slick-dots {
+            margin-top: 30px; 
+          }
+        }
+      `}</style>
+      <Box sx={{ padding: '2rem', margin: '0 auto', maxWidth: '1200px' }}>
+        <Typography variant="h4" sx={{ marginBottom: '2rem', fontWeight: 'bold', color: '#fff', textAlign: 'center' }}>
+          Projetos
+        </Typography>
+        <Slider {...settings}>
+          {projects.map((project, index) => (
+            <Box key={index} sx={{ padding: '0 8px' }}>
+              <Card sx={{
+                backgroundColor: 'transparent',
+                color: '#fff',
+                height: '500px',
+                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.2)',
+                transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                  boxShadow: '0px 6px 30px rgba(0, 0, 0, 0.4)',
+                },
+                borderRadius: '12px',
+                display: 'flex',
+                flexDirection: 'column',
+              }}>
+                <CardMedia
+                  component="img"
+                  image={project.image}
+                  alt={project.title}
+                  sx={{
+                    height: '200px',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                  }}
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography variant="h5" component="div" sx={{ fontWeight: 'bold', marginBottom: '8px' }}>
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#b0b0b0', lineHeight: 1.6 }}>
+                    {project.description}
+                  </Typography>
+                </CardContent>
+                <CardActions sx={{ justifyContent: 'center' }}>
+                  <Tooltip title="Repositório GitHub" arrow>
+                    <IconButton size="small" href={project.github} target="_blank" rel="noopener" sx={{ color: '#ffcc00', transition: 'color 0.3s ease', '&:hover': { color: '#fff' } }}>
+                      <GitHubIcon />
                     </IconButton>
                   </Tooltip>
-                )}
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+                  {project.demo && (
+                    <Tooltip title="Demo" arrow>
+                      <IconButton size="small" href={project.demo} target="_blank" rel="noopener" sx={{ color: '#ffcc00', transition: 'color 0.3s ease', '&:hover': { color: '#fff' } }}>
+                        <LaunchIcon />
+                      </IconButton>
+                    </Tooltip>
+                  )}
+                </CardActions>
+              </Card>
+            </Box>
+          ))}
+        </Slider>
+      </Box>
+    </>
   );
 };
-
 
 export default Projects;
